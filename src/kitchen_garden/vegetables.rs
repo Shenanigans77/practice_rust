@@ -6,11 +6,11 @@ pub struct Vegetable{
 }
 
 impl Vegetable {
-    fn veg_color(&self) -> String {
+    pub fn veg_color(&self) -> String {
         color;
     }
 
-    fn veg_family(&self) -> String {
+    pub fn veg_family(&self) -> String {
         family;
     }
 } 
