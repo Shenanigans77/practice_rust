@@ -7,10 +7,10 @@ pub struct Vegetable{
 
 impl Vegetable {
     pub fn veg_color(&self) -> String {
-        color;
+        color
     }
 
     pub fn veg_family(&self) -> String {
-        family;
+        family
     }
 } 
