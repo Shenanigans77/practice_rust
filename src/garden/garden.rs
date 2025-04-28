@@ -1,4 +1,3 @@
-pub mod garden;
 
 #[derive(Debug)]
 pub struct Vegetable{
