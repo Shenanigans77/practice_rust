@@ -2,8 +2,8 @@
 
 #[derive(Debug)]
 pub struct Crisper {
-    volume: i32,
-    occupied_volume: i32,
+    pub volume: i32,
+    pub occupied_volume: i32,
 }
 
 impl Crisper {
