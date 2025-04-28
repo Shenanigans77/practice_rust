@@ -1,8 +1,8 @@
 
 #[derive(Debug)]
 pub struct Vegetable{
-    color: String,
-    family: String,    
+    pub color: String,
+    pub family: String,    
 }
 
 impl Vegetable {
