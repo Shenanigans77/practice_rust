@@ -12,3 +12,19 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
+
+mod snails {
+    mod good_snails {
+        fn add_to_waitlist() {}
+
+        fn seat_at_table() {}
+    }
+
+    mod bad_snails {
+        fn take_order() {}
+
+        fn serve_order() {}
+
+        fn take_payment() {}
+    }
+}
