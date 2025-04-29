@@ -7,12 +7,15 @@ mod crisper;
 fn main() {
     println!("Hello, world!");
 
-    let drawer = crisper::Crisper{
+    let mut drawer = crisper::Crisper{
         volume: 160,
         occupied_volume: 0,
+        contents: Vec::new()
     };
 
     println!("{}", drawer.crisper_space());
+
+    
 
     let squash = Vegetable{
         name: String::from("Squash"),
@@ -20,6 +23,17 @@ fn main() {
         family: String::from("Gourd"),
     };
 
-    println!("{}: a {} colored vegetable of the {} family.", squash.name, squash.color, squash.family)
+    let spinach = Vegetable{
+        name: String::from("Spinach"),
+        color: String::from("Green"),
+        family: String::from("Leafy"),
+    };
+
+    drawer.add_to_crisper(&squash.name);
+    drawer.add_to_crisper(&spinach.name);
+
+    println!("{}: a {} colored vegetable of the {} family.", squash.name, squash.color, squash.family);
+
+    println!("{}", drawer.contents[1]);
 }
  
