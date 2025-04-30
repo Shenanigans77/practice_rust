@@ -9,11 +9,7 @@ mod crisper;
 fn main() {
     println!("Hello, world!");
 
-    let mut drawer = crisper::Crisper{
-        volume: 160,
-        occupied_volume: 0,
-        contents_names: Vec::new()
-    };
+    let mut drawer = crisper::Crisper::new_crisper(160);
 
     println!("{}", drawer.crisper_space());
 
