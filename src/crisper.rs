@@ -4,7 +4,7 @@
 pub struct Crisper {
     pub volume: i32,
     pub occupied_volume: i32,
-    pub contents: Vec<String>
+    pub contents_names: Vec<String>
 }
 
 impl Crisper {
@@ -14,6 +14,6 @@ impl Crisper {
     }
     // Add contents to the crisper.
     pub fn add_to_crisper(&mut self, vegetable: &String) {
-        self.contents.push(vegetable.to_string());
+        self.contents_names.push(vegetable.to_string());
     }
 }
