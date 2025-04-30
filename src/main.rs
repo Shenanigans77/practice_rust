@@ -35,5 +35,9 @@ fn main() {
     println!("{}: a {} colored vegetable of the {} family.", squash.name, squash.color, squash.family);
 
     println!("{}", drawer.contents[1]);
+
+    for i in &drawer.contents {
+        println!("{i}")
+    }
 }
  
