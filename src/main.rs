@@ -7,12 +7,12 @@ mod kitchen_garden;
 mod crisper;
 
 fn main() {
-    println!("Hello, world!");
-
+    // New crisper drawer
     let mut drawer = crisper::Crisper::new_crisper(160);
 
     println!("{}", drawer.crisper_space());
 
+    // New vegetables
     let squash = new_vegetable(String::from("Squash"), String::from("Yellow"), String::from("Gourd"));
   
     let spinach = new_vegetable(String::from("Spinach"), String::from("Green"), String::from("Leafy"));

@@ -11,16 +11,26 @@ impl Vegetable {
         &self.color
     }
 
+    pub fn veg_spoil_rate(&self) -> u8 {
+        match &self.family {
+            VegetableFamily::Gourd => 10,
+            VegetableFamily::Leafy => 25,
+            VegetableFamily::Cruciferous => 23,
+            VegetableFamily::Nightshade => 8,
+            VegetableFamily::Tuber => 9,
+        }
+    }
+
     //pub fn veg_family_to_string(&self) -> &String {
     //    match &self.family {
     //        VegetableFamily::Gourd => $String::from
     //    }
     //}
-} 
+}  
 
 // playing with Enums - Todo - should this be a pub enum?
 #[derive(Debug)]
-enum VegetableFamily {
+pub enum VegetableFamily {
     Gourd,
     Leafy,
     Cruciferous,
