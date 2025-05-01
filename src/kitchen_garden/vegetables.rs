@@ -7,11 +7,11 @@ pub struct Vegetable{
 }
 
 impl Vegetable {
-    pub fn veg_color(&self) -> &String {
-        &self.color
+    pub fn veg_color(&self) -> String {
+        String::from(&self.color)
     }
 
-    pub fn veg_spoil_rate(&self) -> u8 {
+    pub fn veg_spoil_rate(&self) -> i32 {
         match &self.family {
             VegetableFamily::Gourd => 10,
             VegetableFamily::Leafy => 25,
