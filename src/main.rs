@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+
 use kitchen_garden::vegetables::new_vegetable;
 
 //use crate::kitchen_garden::vegetables::Vegetable;
@@ -10,7 +11,8 @@ mod crisper;
 
 fn main() {
     // Basic information to manipulate later.
-    let num_ordered_list: [i32; 10];
+    let num_ordered_list: [i32; 10] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
     let num_random_list= [100,250,375,500];
 
     let mut unsorted_nums: Vec<i32> = Vec::new();
@@ -56,5 +58,18 @@ fn main() {
     //for i in &drawer {
     //    print!("Spoil rate for {} is {}.", i.name, i.veg_spoil_rate)
     //}
+
+    // Use any unused variables.
+    let mut i: usize = 0;
+    let mut number = 0;
+    while i < 10 {
+        print!("{}", i);
+        for j in num_random_list {
+            number = num_ordered_list[i] + j;
+            print!("{}", number);
+        } 
+        unsorted_nums.push(number);
+        i+= 1;
+    }
 }
  
