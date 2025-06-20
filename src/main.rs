@@ -35,13 +35,13 @@ fn main() {
 
     drawer.add_to_crisper(&squash.name);
     drawer_contents.insert (&squash.name, squash.veg_color());
-    print!("Spoil rate for {} is {}.", squash.name, squash.veg_spoil_rate());    
+    print!("Spoil rate for {} is {}.\n", squash.name, squash.veg_spoil_rate());    
     drawer.add_to_crisper(&spinach.name);
     drawer_contents.insert(&spinach.name, spinach.veg_color());
-    print!("Spoil rate for {} is {}.", spinach.name, spinach.veg_spoil_rate());
+    print!("Spoil rate for {} is {}.\n", spinach.name, spinach.veg_spoil_rate());
     drawer.add_to_crisper(&cauliflower.name);
     drawer_contents.insert(&cauliflower.name, cauliflower.veg_color());
-    print!("Spoil rate for {} is {}.", cauliflower.name, cauliflower.veg_spoil_rate());
+    print!("Spoil rate for {} is {}.\n", cauliflower.name, cauliflower.veg_spoil_rate());
 
     vegetable_colors.push(squash.color);
     vegetable_colors.push(spinach.color);
@@ -66,7 +66,7 @@ fn main() {
         print!("{}", i);
         for j in num_random_list {
             number = num_ordered_list[i] + j;
-            print!("{}", number);
+            print!("{}\n", number);
         } 
         unsorted_nums.push(number);
         i+= 1;
