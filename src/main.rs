@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use kitchen_garden::vegetables::new_vegetable;
 
-use crate::kitchen_garden::vegetables::Vegetable;
+//use crate::kitchen_garden::vegetables::Vegetable;
 //pub use crate::garden::good_snails;
 
 mod kitchen_garden;
@@ -33,10 +33,13 @@ fn main() {
 
     drawer.add_to_crisper(&squash.name);
     drawer_contents.insert (&squash.name, squash.veg_color());
+    print!("Spoil rate for {} is {}.", squash.name, squash.veg_spoil_rate());    
     drawer.add_to_crisper(&spinach.name);
     drawer_contents.insert(&spinach.name, spinach.veg_color());
+    print!("Spoil rate for {} is {}.", spinach.name, spinach.veg_spoil_rate());
     drawer.add_to_crisper(&cauliflower.name);
     drawer_contents.insert(&cauliflower.name, cauliflower.veg_color());
+    print!("Spoil rate for {} is {}.", cauliflower.name, cauliflower.veg_spoil_rate());
 
     vegetable_colors.push(squash.color);
     vegetable_colors.push(spinach.color);
@@ -48,5 +51,10 @@ fn main() {
     for i in &drawer.contents_names {
         println!("{i}")
     }
+
+    // Show the spoil rate for all vegetables in the drawer
+    //for i in &drawer {
+    //    print!("Spoil rate for {} is {}.", i.name, i.veg_spoil_rate)
+    //}
 }
  
